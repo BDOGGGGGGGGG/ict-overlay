@@ -24,10 +24,11 @@ export function GradingScale() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Every buy-in, <span className="text-primary">graded</span>.
+            Trade Quality Grader.
           </h2>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            The AI scores confluence across your chosen strategy's key patterns — then assigns a letter grade so you know exactly which setups are worth taking.
+            Every setup gets a letter grade based on real confluence — how many ICT concepts align at the same price level, across multiple timeframes. No more second-guessing.
+            <span className="text-foreground font-medium"> Only trade A and B setups. Let the AI filter out the noise.</span>
           </p>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
@@ -62,9 +63,9 @@ export function GradingScale() {
 
             <div className="space-y-4">
               {[
-                { title: "Confluence Scoring", text: "Multiple concepts at the same price level = higher grade. The more signals that align, the stronger the setup." },
-                { title: "Automated Analysis", text: "What takes a trader 20+ minutes happens in seconds. No more manually drawing zones across timeframes." },
-                { title: "Only Take A-Rated Setups", text: "Filter out noise. Focus on B+ and above. Stop overtrading bad setups." },
+                { title: "Not a generic scanner", text: "TradingView has ICT indicator scripts — but they just detect shapes geometrically. This AI grades whether a setup is actually tradeable based on confluence, context, and structural alignment." },
+                { title: "30 minutes of prep → 3 seconds", text: "Multi-timeframe analysis, OB validation, FVG tracking, BOS confirmation — all happening simultaneously. What used to be your entire pre-session routine is now instant." },
+                { title: "Your new rule: no B, no trade", text: "The grading system isn't just information — it's discipline. Undisciplined traders take C-grade setups out of FOMO. This gives you a rule to follow." },
               ].map((item) => (
                 <div key={item.title} className="rounded-2xl bg-background p-5">
                   <div className="text-sm font-medium text-foreground mb-1">{item.title}</div>

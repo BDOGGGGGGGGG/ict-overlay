@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Trading Overlay — AI-Powered Trade Analysis",
   description:
-    "AI-powered trade analysis platform. Choose your strategy — ICT, SMC, or Price Action — and let AI detect setups, score confluence, and grade zones in real-time.",
+    "The first AI that actually knows ICT. Detects Order Blocks, FVGs, BOS, and MSS across multiple timeframes — then grades every setup from F to A+ so you only take trades worth taking.",
 };
 
 export default function RootLayout({

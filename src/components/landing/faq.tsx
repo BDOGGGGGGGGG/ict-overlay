@@ -6,44 +6,44 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
+    question: "How is this different from TradingView ICT indicators?",
+    answer:
+      "TradingView scripts detect shapes geometrically — they'll mark any random candle as an \"order block.\" This AI doesn't just find patterns, it grades whether they're actually tradeable based on confluence, market context, and structural alignment across multiple timeframes. That's the difference between a shape detector and an actual trading tool.",
+  },
+  {
     question: "Is this a trading bot?",
     answer:
-      "No. Trading Overlay is an analysis tool, not a bot. It detects buy-in zones on your chart using your chosen strategy and grades them from F to A+ — but you decide whether to take the trade. No automated execution, no black-box signals.",
+      "No. It's an analysis overlay. It shows you where the setups are and grades them — you decide whether to take the trade. No automated execution, no black-box signals. You stay in control.",
   },
   {
-    question: "What markets does it work on?",
+    question: "I already know ICT. Why do I need this?",
     answer:
-      "Forex pairs (EUR/USD, GBP/USD, etc.), US indices (NQ, ES, YM), and major crypto pairs. All strategies work across liquid markets.",
+      "You know the concepts. But under pressure during New York session, can you simultaneously scan 3 timeframes for OBs, track every unfilled FVG, confirm BOS, and catch MSS before the crowd? That 30-60 minutes of prep happens in seconds. The AI doesn't replace your knowledge — it removes the manual grind so you can focus on execution.",
   },
   {
-    question: "Do I need to know these strategies already?",
+    question: "What does the grading system actually measure?",
     answer:
-      "No. The AI handles the analysis automatically. Understanding the basics helps you interpret the grades better, but it's not required. We include a quick-start guide with every plan.",
+      "Confluence. An A+ means multiple ICT concepts — order block, FVG, BOS, liquidity sweep — all align at the same price level across multiple timeframes. A C means one concept showed up with no supporting context. The grade tells you whether a setup is worth risking capital on.",
   },
   {
-    question: "How is this different from drawing zones manually?",
+    question: "Will this work for NQ during kill zones?",
     answer:
-      "Speed and objectivity. A manual trader spends 20+ minutes checking confluences across timeframes. The AI does it in seconds — no bias, no missed setups.",
+      "Yes. It works on Forex pairs (EUR/USD, GBP/USD, etc.), US indices (NQ, ES, YM), and major crypto. It's especially useful during fast sessions like New York open where you can't manually scan everything in time.",
   },
   {
-    question: "Can I cancel anytime?",
+    question: "I keep taking C-grade setups out of FOMO. How does this help?",
     answer:
-      "Yes. Both plans can be cancelled at any time. No contracts, no cancellation fees. You keep access until the end of your billing period.",
+      "That's exactly what the grading system is for. It gives you a simple rule: no grade below B, no trade. When you can see the letter grade in real-time, it's much easier to pass on weak setups. The discipline is built into the tool.",
   },
   {
     question: "What's the difference between Monthly and Pro?",
     answer:
-      "Monthly gives you full access for $30/mo. Pro is $200/yr (saves $160 annually) and includes priority support, early access to new features, and multi-chart analysis.",
+      "Monthly gives you full access for $30/mo. Pro is $200/yr (saves $160 annually) and includes priority support, all timeframes from 1m to 1M, multi-chart analysis for cross-pair correlation, and webhook/API access.",
   },
   {
-    question: "Is my data secure?",
+    question: "Can I cancel anytime?",
     answer:
-      "Yes. We don't store your trades or personal data. The overlay runs analysis on chart data in real-time — nothing is saved or shared.",
-  },
-  {
-    question: "How accurate is the grading system?",
-    answer:
-      "The AI scores confluence — it doesn't predict direction. An A+ grade means multiple concepts from your chosen strategy align, which historically produces higher-probability setups. No tool can guarantee profits.",
+      "Yes. No contracts, no cancellation fees. Full refund within the first 7 days, no questions asked. You keep access until the end of your billing period.",
   },
 ];
 

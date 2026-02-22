@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 
 export default function SignupPage() {
   return (
@@ -14,12 +15,9 @@ export default function SignupPage() {
         className="w-full max-w-sm"
       >
         <div className="mb-8 text-center">
-          <Link href="/" className="inline-flex items-center gap-1.5 mb-8">
+          <Link href="/" className="inline-flex items-center gap-2.5 mb-8">
+            <Logo className="h-7" />
             <span className="text-lg font-semibold tracking-tight text-foreground">Trading Overlay</span>
-            <span className="flex items-center gap-1 rounded-full bg-bullish/10 px-2 py-0.5 text-[10px] font-medium text-bullish">
-              <span className="h-1.5 w-1.5 rounded-full bg-bullish animate-pulse" />
-              Live
-            </span>
           </Link>
           <h1 className="text-2xl font-semibold text-foreground">Create your account</h1>
           <p className="mt-2 text-sm text-muted-foreground">Start seeing where smart money enters</p>

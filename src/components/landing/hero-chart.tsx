@@ -186,10 +186,14 @@ export function HeroChart() {
         className="mb-14 max-w-2xl"
       >
         <h1 className="text-5xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.08]">
-          Every trade, backed by <span className="text-primary">data</span>.
+          Stop guessing. <span className="text-primary">Start grading</span>.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          Choose your strategy — ICT, SMC, or Price Action — and let AI detect buy-in zones on your chart, graded from F to A+.
+          The first AI that actually knows ICT — not a generic pattern scanner with ICT labels.
+          It grades every setup from F to A+ based on real confluence, so you only take trades worth taking.
+        </p>
+        <p className="mt-3 text-sm text-muted-foreground/70 italic">
+          Built for ICT traders, by an ICT trader.
         </p>
         <div className="mt-8 flex items-center gap-4">
           <Link href="/pricing">
@@ -198,7 +202,7 @@ export function HeroChart() {
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
-          <span className="text-sm text-muted-foreground">From $30/mo</span>
+          <span className="text-sm text-muted-foreground">No grade below B, no trade.</span>
         </div>
       </motion.div>
 
@@ -227,10 +231,6 @@ export function HeroChart() {
               >
                 {stats.zones} Zone{stats.zones !== 1 ? "s" : ""}
               </motion.span>
-              <span className="flex items-center gap-1.5 font-mono text-[10px] text-bullish">
-                <span className="h-1.5 w-1.5 rounded-full bg-bullish animate-pulse" />
-                LIVE
-              </span>
             </div>
           </div>
           <div ref={chartContainerRef} className="h-[500px] w-full" />
@@ -244,10 +244,6 @@ export function HeroChart() {
               <Zap className="h-3.5 w-3.5 text-[#a78bfa]" />
               <span className="font-mono text-[11px] font-bold text-[#a78bfa] uppercase tracking-widest">Overlay</span>
             </div>
-            <span className="flex items-center gap-1.5 font-mono text-[10px] text-bullish">
-              <span className="h-1.5 w-1.5 rounded-full bg-bullish animate-pulse" />
-              ACTIVE
-            </span>
           </div>
 
           {/* Stats */}
@@ -382,15 +378,15 @@ export function HeroChart() {
       <div className="mx-auto max-w-5xl px-6 grid grid-cols-3 gap-8">
         <div className="text-center">
           <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">$2M+</div>
-          <div className="mt-2 text-sm text-muted-foreground">Connected in accounts</div>
+          <div className="mt-2 text-sm text-muted-foreground">In connected accounts</div>
         </div>
         <div className="text-center border-x border-border">
           <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">400+</div>
-          <div className="mt-2 text-sm text-muted-foreground">Active traders</div>
+          <div className="mt-2 text-sm text-muted-foreground">ICT traders using it daily</div>
         </div>
         <div className="text-center">
           <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">12K+</div>
-          <div className="mt-2 text-sm text-muted-foreground">Zones graded</div>
+          <div className="mt-2 text-sm text-muted-foreground">Setups graded this month</div>
         </div>
       </div>
     </motion.section>

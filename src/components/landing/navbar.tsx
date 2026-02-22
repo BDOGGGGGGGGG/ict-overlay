@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/ui/logo";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -20,12 +21,9 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-1.5">
+        <Link href="/" className="flex items-center gap-2.5">
+          <Logo />
           <span className="text-base font-semibold tracking-tight text-foreground">Trading Overlay</span>
-          <span className="flex items-center gap-1 rounded-full bg-bullish/10 px-2 py-0.5 text-[10px] font-medium text-bullish">
-            <span className="h-1.5 w-1.5 rounded-full bg-bullish animate-pulse" />
-            Live
-          </span>
         </Link>
 
         <div className="hidden items-center gap-8 sm:flex">

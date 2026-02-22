@@ -48,12 +48,7 @@ export function TopBar() {
         {MOCK_MARKET_OVERVIEW.session} Session
       </span>
 
-      <div className="ml-auto flex items-center gap-2">
-        <Badge variant="outline" className="h-5 gap-1 border-bullish/30 text-bullish text-[10px] px-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-bullish animate-pulse" />
-          Live
-        </Badge>
-      </div>
+      <div className="ml-auto flex items-center gap-2" />
     </header>
   );
 }

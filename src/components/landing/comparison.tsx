@@ -110,23 +110,23 @@ export function Comparison() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            See the difference.
+            Same chart. <span className="text-primary">Completely different read.</span>
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            The same chart — with and without Trading Overlay.
+          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
+            On the left: what you see staring at a chart for 20 minutes, trying to eyeball OBs and FVGs across timeframes. On the right: what the AI sees in 3 seconds.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-border">
               <div className="flex items-center border-b border-border bg-card px-5 py-3 text-sm">
-                <span className="text-muted-foreground">Without Trading Overlay</span>
+                <span className="text-muted-foreground">You, eyeballing it</span>
               </div>
               <div ref={plainRef} className="h-[240px] w-full bg-card opacity-60" />
             </div>
 
             <div className="overflow-hidden rounded-2xl border-2 border-primary/30 glow-border">
               <div className="flex items-center justify-between border-b border-border bg-card px-5 py-3 text-sm">
-                <span className="font-medium text-primary">With Trading Overlay</span>
+                <span className="font-medium text-primary">With the AI overlay</span>
                 <span className="rounded-full bg-primary/15 px-3 py-0.5 text-xs font-medium text-primary">
                   2 Buy Zones
                 </span>
