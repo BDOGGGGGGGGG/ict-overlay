@@ -27,8 +27,8 @@ export function GradingScale() {
             Trade Quality Grader.
           </h2>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            Every setup gets a letter grade based on real confluence — how many ICT concepts align at the same price level, across multiple timeframes. No more second-guessing.
-            <span className="text-foreground font-medium"> Only trade A and B setups. Let the AI filter out the noise.</span>
+            Every setup gets a letter grade based on real confluence — how many signals from your chosen strategy align at the same price level. No more second-guessing.
+            <span className="text-foreground font-medium"> Only trade A and B setups. Let the indicator filter out the noise.</span>
           </p>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
@@ -63,8 +63,8 @@ export function GradingScale() {
 
             <div className="space-y-4">
               {[
-                { title: "Not a generic scanner", text: "TradingView has ICT indicator scripts — but they just detect shapes geometrically. This AI grades whether a setup is actually tradeable based on confluence, context, and structural alignment." },
-                { title: "30 minutes of prep → 3 seconds", text: "Multi-timeframe analysis, OB validation, FVG tracking, BOS confirmation — all happening simultaneously. What used to be your entire pre-session routine is now instant." },
+                { title: "Not a generic scanner", text: "Most TradingView indicators just detect shapes. This one grades whether a setup is actually tradeable based on confluence, trend alignment, volume, and structural context." },
+                { title: "Runs on every candle", text: "Zone validation, gap tracking, structure confirmation — all happening on every bar. What used to be your entire pre-session routine now runs automatically on your chart." },
                 { title: "Your new rule: no B, no trade", text: "The grading system isn't just information — it's discipline. Undisciplined traders take C-grade setups out of FOMO. This gives you a rule to follow." },
               ].map((item) => (
                 <div key={item.title} className="rounded-2xl bg-background p-5">

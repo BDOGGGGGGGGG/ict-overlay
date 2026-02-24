@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { createChart, ColorType, CandlestickSeries, createSeriesMarkers } from "lightweight-charts";
 import { Button } from "@/components/ui/button";
@@ -185,24 +184,25 @@ export function HeroChart() {
         transition={{ duration: 0.6 }}
         className="mb-14 max-w-2xl"
       >
+        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-6">
+          <span className="text-xs font-medium text-primary">TradingView Indicator</span>
+        </div>
         <h1 className="text-5xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.08]">
-          Stop guessing. <span className="text-primary">Start grading</span>.
+          The indicator that <span className="text-primary">grades</span> your setups.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          The first AI that actually knows ICT — not a generic pattern scanner with ICT labels.
-          It grades every setup from F to A+ based on real confluence, so you only take trades worth taking.
-        </p>
-        <p className="mt-3 text-sm text-muted-foreground/70 italic">
-          Built for ICT traders, by an ICT trader.
+          A TradingView indicator that detects Order Blocks, FVGs, Supply & Demand zones, and more — then grades every setup from F to A+ based on confluence. Choose ICT, SMC, or Price Action. Add it to any chart.
         </p>
         <div className="mt-8 flex items-center gap-4">
-          <Link href="/pricing">
-            <Button size="lg" className="rounded-full px-8 text-base h-12 glow-green transition-shadow duration-300">
-              Get Started
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </Link>
-          <span className="text-sm text-muted-foreground">No grade below B, no trade.</span>
+          <Button
+            size="lg"
+            className="rounded-full px-8 text-base h-12 glow-green transition-shadow duration-300"
+            onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            Get the Indicator — $49
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+          <span className="text-sm text-muted-foreground">Works on any pair & timeframe</span>
         </div>
       </motion.div>
 
@@ -242,7 +242,7 @@ export function HeroChart() {
           <div className="flex items-center justify-between border-b border-[#2a2a2c] bg-[#1a1a1c] px-4 py-2.5">
             <div className="flex items-center gap-1.5">
               <Zap className="h-3.5 w-3.5 text-[#a78bfa]" />
-              <span className="font-mono text-[11px] font-bold text-[#a78bfa] uppercase tracking-widest">Overlay</span>
+              <span className="font-mono text-[11px] font-bold text-[#a78bfa] uppercase tracking-widest">Indicator</span>
             </div>
           </div>
 
@@ -352,7 +352,7 @@ export function HeroChart() {
               >
                 {stats.grade}
               </motion.div>
-              <span className="font-mono text-[10px] text-[#636366]">confluence rating</span>
+              <span className="font-mono text-[10px] text-[#636366]">quality score</span>
             </div>
           </div>
 
@@ -360,7 +360,7 @@ export function HeroChart() {
           <div className="border-t border-[#2a2a2c] px-4 py-3 mt-auto">
             <div className="flex items-center gap-1.5">
               <Bot className="h-3 w-3 text-[#a78bfa]" />
-              <span className="font-mono text-[10px] text-[#636366]">Powered by AI</span>
+              <span className="font-mono text-[10px] text-[#636366]">Pine Script v5</span>
             </div>
           </div>
         </div>
@@ -377,16 +377,16 @@ export function HeroChart() {
     >
       <div className="mx-auto max-w-5xl px-6 grid grid-cols-3 gap-8">
         <div className="text-center">
-          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">$2M+</div>
-          <div className="mt-2 text-sm text-muted-foreground">In connected accounts</div>
+          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">3</div>
+          <div className="mt-2 text-sm text-muted-foreground">Strategies built in</div>
         </div>
         <div className="text-center border-x border-border">
-          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">400+</div>
-          <div className="mt-2 text-sm text-muted-foreground">ICT traders using it daily</div>
+          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">10+</div>
+          <div className="mt-2 text-sm text-muted-foreground">Patterns detected</div>
         </div>
         <div className="text-center">
-          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">12K+</div>
-          <div className="mt-2 text-sm text-muted-foreground">Setups graded this month</div>
+          <div className="font-mono text-4xl font-semibold text-foreground sm:text-5xl">F–A+</div>
+          <div className="mt-2 text-sm text-muted-foreground">Confluence grading</div>
         </div>
       </div>
     </motion.section>

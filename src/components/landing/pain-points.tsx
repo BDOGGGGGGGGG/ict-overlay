@@ -6,31 +6,31 @@ import { Eye, Layers, Clock, Brain } from "lucide-react";
 const points = [
   {
     icon: Eye,
-    label: "Order Block Detection",
-    pain: "Is this actually an OB or just a random candle?",
+    label: "Auto-Detect Setups",
+    pain: "Staring at the chart and still not sure what's a valid setup",
     solve:
-      "Identifies institutional footprints your eye can miss at speed. On NQ during New York, you can't manually scan 3 timeframes — the AI can.",
+      "The indicator detects Order Blocks, FVGs, Supply & Demand zones, Pin Bars, and more — automatically, on every candle. No more second-guessing.",
   },
   {
     icon: Layers,
-    label: "Fair Value Gap Analysis",
-    pain: "Manually tracking every unfilled gap across timeframes",
+    label: "3 Strategies, 1 Indicator",
+    pain: "Needing separate indicators for ICT, SMC, and Price Action",
     solve:
-      "Tracks every unfilled imbalance and alerts you when price returns to fill. FVG hunts are the most tedious part of ICT prep — automated.",
+      "Switch between ICT, SMC, and Price Action with one dropdown. Each strategy runs its own detection engine with the right patterns for that methodology.",
   },
   {
     icon: Brain,
-    label: "Break of Structure",
-    pain: "Getting faked out by single-timeframe BOS signals",
+    label: "Confluence Grading",
+    pain: "Taking trades with one signal and hoping for the best",
     solve:
-      "Multi-timeframe BOS confirmation. Stop getting faked out by single-TF signals — the #1 ICT newbie mistake.",
+      "Every setup is scored by how many signals align at the same level. More confluence = higher grade = higher probability. The indicator does the math for you.",
   },
   {
     icon: Clock,
-    label: "Market Structure Shift",
-    pain: "Missing reversals because you can't watch 5m and 15m at once",
+    label: "Built-In Alerts",
+    pain: "Missing entries because you weren't watching at the right time",
     solve:
-      "Early reversal detection before the crowd sees it. MSS requires watching multiple timeframes simultaneously — the AI does it for you.",
+      "Set TradingView alerts for B+ or A+ grade setups. Get notified the moment a high-confluence setup forms on any pair you're watching.",
   },
 ];
 
@@ -45,11 +45,9 @@ export function PainPoints() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            You know the strategy. <span className="text-primary">The execution kills you.</span>
+            One indicator. <span className="text-primary">Every strategy.</span>
           </h2>
-          <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            ICT works. But misidentifying setups under pressure, drowning in confluences, and spending 30–60 minutes on multi-timeframe prep — that's where traders blow up.
-          </p>
+
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {points.map((p, i) => (

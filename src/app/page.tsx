@@ -4,6 +4,7 @@ import { PainPoints } from "@/components/landing/pain-points";
 import { GradingScale } from "@/components/landing/grading-scale";
 import { Backtest } from "@/components/landing/backtest";
 import { Comparison } from "@/components/landing/comparison";
+import { Pricing } from "@/components/landing/pricing";
 import { FAQ } from "@/components/landing/faq";
 import { Footer } from "@/components/landing/footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <div id="compare">
         <Comparison />
       </div>
+      <Pricing />
       <FAQ />
       <Footer />
     </div>

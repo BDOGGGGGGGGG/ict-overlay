@@ -6,44 +6,44 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "How is this different from TradingView ICT indicators?",
+    question: "How do I add this to TradingView?",
     answer:
-      "TradingView scripts detect shapes geometrically — they'll mark any random candle as an \"order block.\" This AI doesn't just find patterns, it grades whether they're actually tradeable based on confluence, market context, and structural alignment across multiple timeframes. That's the difference between a shape detector and an actual trading tool.",
+      "Open the Pine Editor at the bottom of your TradingView chart, paste the indicator code, and click \"Add to Chart.\" It works instantly on any pair and timeframe.",
+  },
+  {
+    question: "What strategies does it support?",
+    answer:
+      "ICT (Order Blocks, FVGs, BOS, MSS), SMC (Supply & Demand, Change of Character, Breaker Blocks), and Price Action (S/R levels, Pin Bars, Engulfing patterns). Switch between them with a single dropdown.",
+  },
+  {
+    question: "How is this different from other TradingView indicators?",
+    answer:
+      "Most indicators just detect one pattern type. This indicator detects multiple patterns from your chosen strategy, then scores them based on confluence — how many signals align at the same level. That's the grading system. You get a letter grade (F to A+) for every setup.",
+  },
+  {
+    question: "What does the grading system measure?",
+    answer:
+      "Confluence. An A+ means multiple signals from your chosen strategy all align at the same price level — trend direction, volume, structural context. A C means one signal showed up with no supporting context. The grade tells you whether a setup is worth risking capital on.",
+  },
+  {
+    question: "What markets and pairs does it work on?",
+    answer:
+      "Any instrument on TradingView — Forex, indices, crypto, stocks, commodities. It works on all timeframes from 1 minute to monthly.",
+  },
+  {
+    question: "Can I set alerts?",
+    answer:
+      "Yes. The indicator has built-in alert conditions for B+ and A+ grade setups. Set them up through TradingView's standard alert system and get notified on any device.",
   },
   {
     question: "Is this a trading bot?",
     answer:
-      "No. It's an analysis overlay. It shows you where the setups are and grades them — you decide whether to take the trade. No automated execution, no black-box signals. You stay in control.",
+      "No. It's an analysis indicator. It shows you where the setups are, draws zones on your chart, and grades them — you decide whether to take the trade. No automated execution.",
   },
   {
-    question: "I already know ICT. Why do I need this?",
+    question: "Is it free?",
     answer:
-      "You know the concepts. But under pressure during New York session, can you simultaneously scan 3 timeframes for OBs, track every unfilled FVG, confirm BOS, and catch MSS before the crowd? That 30-60 minutes of prep happens in seconds. The AI doesn't replace your knowledge — it removes the manual grind so you can focus on execution.",
-  },
-  {
-    question: "What does the grading system actually measure?",
-    answer:
-      "Confluence. An A+ means multiple ICT concepts — order block, FVG, BOS, liquidity sweep — all align at the same price level across multiple timeframes. A C means one concept showed up with no supporting context. The grade tells you whether a setup is worth risking capital on.",
-  },
-  {
-    question: "Will this work for NQ during kill zones?",
-    answer:
-      "Yes. It works on Forex pairs (EUR/USD, GBP/USD, etc.), US indices (NQ, ES, YM), and major crypto. It's especially useful during fast sessions like New York open where you can't manually scan everything in time.",
-  },
-  {
-    question: "I keep taking C-grade setups out of FOMO. How does this help?",
-    answer:
-      "That's exactly what the grading system is for. It gives you a simple rule: no grade below B, no trade. When you can see the letter grade in real-time, it's much easier to pass on weak setups. The discipline is built into the tool.",
-  },
-  {
-    question: "What's the difference between Monthly and Pro?",
-    answer:
-      "Monthly gives you full access for $30/mo. Pro is $200/yr (saves $160 annually) and includes priority support, all timeframes from 1m to 1M, multi-chart analysis for cross-pair correlation, and webhook/API access.",
-  },
-  {
-    question: "Can I cancel anytime?",
-    answer:
-      "Yes. No contracts, no cancellation fees. Full refund within the first 7 days, no questions asked. You keep access until the end of your billing period.",
+      "The indicator is available as a Pine Script you can add to TradingView. Check the current availability by clicking the \"Add to TradingView\" button above.",
   },
 ];
 

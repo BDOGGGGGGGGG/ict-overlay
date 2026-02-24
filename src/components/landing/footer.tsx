@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
@@ -8,12 +7,6 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <Logo className="h-5" />
           <span className="text-sm font-semibold text-foreground">Trading Overlay</span>
-        </div>
-
-        <div className="flex items-center gap-6 text-sm text-muted-foreground">
-          <Link href="/how-it-works" className="hover:text-foreground transition-colors">How It Works</Link>
-          <Link href="/pricing" className="hover:text-foreground transition-colors">Pricing</Link>
-          <Link href="/support" className="hover:text-foreground transition-colors">Support</Link>
         </div>
 
         <p className="text-sm text-muted-foreground">

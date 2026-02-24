@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { TrendingUp, TrendingDown, Filter } from "lucide-react";
 
-// Simulated 30-trade log — realistic ICT trader results
+// Simulated 30-trade log — realistic trader results
 const allTrades = [
   { id: 1, pair: "NQ", grade: "A+", result: "win", pnl: 320 },
   { id: 2, pair: "EUR/USD", grade: "C", result: "loss", pnl: -150 },
@@ -213,7 +213,7 @@ export function Backtest() {
               The strategy wasn't wrong. You were taking the wrong setups.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              The grading system doesn't make you a better analyst — it makes you a more disciplined one.
+              The indicator doesn't make you a better analyst — it makes you a more disciplined one.
             </p>
           </motion.div>
         </motion.div>

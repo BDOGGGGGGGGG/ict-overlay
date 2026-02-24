@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trading Overlay — AI-Powered Trade Analysis",
+  title: "Trading Overlay — TradingView Indicator for ICT, SMC & Price Action",
   description:
-    "The first AI that actually knows ICT. Detects Order Blocks, FVGs, BOS, and MSS across multiple timeframes — then grades every setup from F to A+ so you only take trades worth taking.",
+    "A TradingView indicator that detects Order Blocks, FVGs, Supply & Demand zones, and more — then grades every setup from F to A+ based on confluence. ICT, SMC, and Price Action strategies built in.",
 };
 
 export default function RootLayout({
