@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 import { supabase } from "@/lib/supabase";
+
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY!);
+}
 
 function generateCode(): string {
   return Math.floor(100000 + Math.random() * 900000).toString();
@@ -43,8 +48,27 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // TODO: Send actual email via Resend/SendGrid — for now, log to console
-    console.log(`[AUTH] Verification code for ${normalizedEmail}: ${code}`);
+    // Send verification email
+    const resend = getResend();
+    const { error: emailError } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || "Trading Overlay <noreply@resend.dev>",
+      to: normalizedEmail,
+      subject: "Your verification code",
+      html: `
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 400px; margin: 0 auto; padding: 40px 20px;">
+          <h2 style="color: #fff; font-size: 20px; margin-bottom: 8px;">Trading Overlay</h2>
+          <p style="color: #a1a1aa; font-size: 14px; margin-bottom: 24px;">Enter this code to sign in:</p>
+          <div style="background: #2c2c2e; border-radius: 12px; padding: 24px; text-align: center; margin-bottom: 24px;">
+            <span style="font-family: monospace; font-size: 32px; font-weight: bold; color: #3dd68c; letter-spacing: 6px;">${code}</span>
+          </div>
+          <p style="color: #71717a; font-size: 12px;">This code expires in 10 minutes. If you didn't request this, ignore this email.</p>
+        </div>
+      `,
+    });
+
+    if (emailError) {
+      console.error("Failed to send email:", emailError);
+    }
 
     return NextResponse.json({ success: true });
   } catch (err) {
