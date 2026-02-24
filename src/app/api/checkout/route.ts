@@ -10,25 +10,31 @@ function getStripe() {
 export async function POST(req: NextRequest) {
   try {
     const stripe = getStripe();
-    const { email } = await req.json();
+    const { email, plan } = await req.json();
 
     if (!email || typeof email !== "string") {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
     }
 
+    const priceId =
+      plan === "yearly"
+        ? process.env.STRIPE_PRICE_YEARLY!
+        : process.env.STRIPE_PRICE_MONTHLY!;
+
     const session = await stripe.checkout.sessions.create({
       customer_email: email,
       line_items: [
         {
-          price: process.env.STRIPE_PRICE_ID!,
+          price: priceId,
           quantity: 1,
         },
       ],
-      mode: "payment",
+      mode: "subscription",
       success_url: `${process.env.NEXT_PUBLIC_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL}`,
       metadata: {
         email,
+        plan,
       },
     });
 

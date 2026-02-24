@@ -4,6 +4,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Loader2, Zap } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+type Plan = "monthly" | "yearly";
 
 const features = [
   "3 strategies — ICT, SMC, Price Action",
@@ -12,13 +15,18 @@ const features = [
   "Zone boxes & grade labels on chart",
   "Built-in alert conditions",
   "Works on any pair & timeframe",
-  "Lifetime access — one payment",
+  "All future updates included",
 ];
 
 export function Pricing() {
+  const [plan, setPlan] = useState<Plan>("yearly");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const price = plan === "yearly" ? 19 : 29;
+  const period = plan === "yearly" ? "/mo" : "/mo";
+  const billedLabel = plan === "yearly" ? "Billed $228/year" : "Billed monthly";
 
   const handleCheckout = async () => {
     if (!email || !email.includes("@")) {
@@ -33,7 +41,7 @@ export function Pricing() {
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, plan }),
       });
 
       const data = await res.json();
@@ -63,20 +71,62 @@ export function Pricing() {
             Get the indicator.
           </h2>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            One payment. Lifetime access. No subscriptions, no recurring fees. Enter your email and you&apos;ll get the Pine Script instantly after checkout.
+            Enter your email, pick a plan, and you&apos;ll get access to the Pine Script instantly after checkout. Cancel anytime.
           </p>
 
           <div className="mt-10 max-w-md">
+            {/* Plan toggle */}
+            <div className="flex items-center gap-1 rounded-full bg-[#1a1a1c] border border-[#2a2a2c] p-1 mb-6 w-fit">
+              <button
+                onClick={() => setPlan("monthly")}
+                className={cn(
+                  "rounded-full px-5 py-2 text-sm font-medium transition-all",
+                  plan === "monthly"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setPlan("yearly")}
+                className={cn(
+                  "rounded-full px-5 py-2 text-sm font-medium transition-all flex items-center gap-2",
+                  plan === "yearly"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                Yearly
+                <span className={cn(
+                  "text-[10px] font-bold rounded-full px-2 py-0.5",
+                  plan === "yearly"
+                    ? "bg-primary-foreground/20 text-primary-foreground"
+                    : "bg-primary/15 text-primary"
+                )}>
+                  SAVE 34%
+                </span>
+              </button>
+            </div>
+
             <div className="rounded-2xl bg-background border-2 border-primary/30 glow-border p-6">
               {/* Header */}
               <div className="flex items-center gap-2 mb-1">
                 <Zap className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">Trading Overlay</span>
               </div>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-bold text-foreground font-mono">$49</span>
-                <span className="text-sm text-muted-foreground">one-time</span>
+              <div className="flex items-baseline gap-1 mb-1">
+                <motion.span
+                  key={price}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-5xl font-bold text-foreground font-mono"
+                >
+                  ${price}
+                </motion.span>
+                <span className="text-lg text-muted-foreground">{period}</span>
               </div>
+              <p className="text-xs text-muted-foreground/60 mb-6">{billedLabel}</p>
 
               {/* Features */}
               <ul className="space-y-2.5 mb-8">
@@ -121,14 +171,14 @@ export function Pricing() {
                     </>
                   ) : (
                     <>
-                      Buy Now — $49
+                      Subscribe — ${price}/mo
                       <ArrowRight className="h-4 w-4 ml-2" />
                     </>
                   )}
                 </Button>
 
                 <p className="text-[11px] text-muted-foreground/60 text-center">
-                  Secure payment via Stripe. You&apos;ll receive the indicator immediately after purchase.
+                  Secure payment via Stripe. Cancel anytime.
                 </p>
               </div>
             </div>

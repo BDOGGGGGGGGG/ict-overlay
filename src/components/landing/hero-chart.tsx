@@ -199,7 +199,7 @@ export function HeroChart() {
             className="rounded-full px-8 text-base h-12 glow-green transition-shadow duration-300"
             onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
           >
-            Get the Indicator — $49
+            Get the Indicator
             <ArrowRight className="h-4 w-4" />
           </Button>
           <span className="text-sm text-muted-foreground">Works on any pair & timeframe</span>
