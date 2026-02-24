@@ -6,19 +6,19 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "How do I add this to TradingView?",
+    question: "How does it work?",
     answer:
-      "Open the Pine Editor at the bottom of your TradingView chart, paste the indicator code, and click \"Add to Chart.\" It works instantly on any pair and timeframe.",
+      "Pick your strategy (ICT, SMC, or Price Action), choose a stock or pair, and Trading Overlay does the rest. It auto-detects setups, marks zones, and grades every buying opportunity from F to A+ — all in real time on your dashboard.",
   },
   {
     question: "What strategies does it support?",
     answer:
-      "ICT (Order Blocks, FVGs, BOS, MSS), SMC (Supply & Demand, Change of Character, Breaker Blocks), and Price Action (S/R levels, Pin Bars, Engulfing patterns). Switch between them with a single dropdown.",
+      "ICT (Order Blocks, FVGs, BOS, MSS), SMC (Supply & Demand, Change of Character, Breaker Blocks), and Price Action (S/R levels, Pin Bars, Engulfing patterns). Switch between them with one click.",
   },
   {
-    question: "How is this different from other TradingView indicators?",
+    question: "How is this different from other trading tools?",
     answer:
-      "Most indicators just detect one pattern type. This indicator detects multiple patterns from your chosen strategy, then scores them based on confluence — how many signals align at the same level. That's the grading system. You get a letter grade (F to A+) for every setup.",
+      "Most tools just detect one pattern type. Trading Overlay detects multiple patterns from your chosen strategy, then scores them based on confluence — how many signals align at the same level. That's the grading system. You get a letter grade (F to A+) for every setup.",
   },
   {
     question: "What does the grading system measure?",
@@ -28,22 +28,22 @@ const faqs = [
   {
     question: "What markets and pairs does it work on?",
     answer:
-      "Any instrument on TradingView — Forex, indices, crypto, stocks, commodities. It works on all timeframes from 1 minute to monthly.",
+      "Forex, indices, crypto, stocks, commodities — any tradeable instrument. It works on all timeframes from 1 minute to monthly.",
   },
   {
-    question: "Can I set alerts?",
+    question: "Can I get alerts?",
     answer:
-      "Yes. The indicator has built-in alert conditions for B+ and A+ grade setups. Set them up through TradingView's standard alert system and get notified on any device.",
+      "Yes. Get real-time notifications when high-confluence B+ or A+ setups form on any stock or pair you're watching.",
   },
   {
     question: "Is this a trading bot?",
     answer:
-      "No. It's an analysis indicator. It shows you where the setups are, draws zones on your chart, and grades them — you decide whether to take the trade. No automated execution.",
+      "No. It's a live analysis platform. It shows you where the setups are, grades them by confluence, and ranks the best buying opportunities — you decide whether to take the trade. No automated execution.",
   },
   {
-    question: "Is it free?",
+    question: "Can I cancel anytime?",
     answer:
-      "The indicator is available as a Pine Script you can add to TradingView. Check the current availability by clicking the \"Add to TradingView\" button above.",
+      "Yes. Both monthly and yearly plans can be cancelled at any time from your dashboard. No contracts, no commitments.",
   },
 ];
 

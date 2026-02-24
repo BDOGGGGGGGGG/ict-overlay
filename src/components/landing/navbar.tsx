@@ -21,7 +21,7 @@ export async function Navbar() {
           </Button>
         ) : (
           <Button size="sm" className="rounded-full px-5 text-sm" asChild>
-            <Link href="/pricing">Get the Indicator</Link>
+            <Link href="/pricing">Get Started</Link>
           </Button>
         )}
       </div>

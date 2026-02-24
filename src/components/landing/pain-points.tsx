@@ -9,28 +9,28 @@ const points = [
     label: "Auto-Detect Setups",
     pain: "Staring at the chart and still not sure what's a valid setup",
     solve:
-      "The indicator detects Order Blocks, FVGs, Supply & Demand zones, Pin Bars, and more — automatically, on every candle. No more second-guessing.",
+      "Trading Overlay detects Order Blocks, FVGs, Supply & Demand zones, Pin Bars, and more — automatically and in real time. No more second-guessing.",
   },
   {
     icon: Layers,
-    label: "3 Strategies, 1 Indicator",
-    pain: "Needing separate indicators for ICT, SMC, and Price Action",
+    label: "3 Strategies, 1 Platform",
+    pain: "Needing separate tools for ICT, SMC, and Price Action",
     solve:
-      "Switch between ICT, SMC, and Price Action with one dropdown. Each strategy runs its own detection engine with the right patterns for that methodology.",
+      "Switch between ICT, SMC, and Price Action with one click. Each strategy runs its own detection engine with the right patterns for that methodology.",
   },
   {
     icon: Brain,
     label: "Confluence Grading",
     pain: "Taking trades with one signal and hoping for the best",
     solve:
-      "Every setup is scored by how many signals align at the same level. More confluence = higher grade = higher probability. The indicator does the math for you.",
+      "Every setup is scored by how many signals align at the same level. More confluence = higher grade = higher probability. We do the math for you.",
   },
   {
     icon: Clock,
-    label: "Built-In Alerts",
+    label: "Real-Time Alerts",
     pain: "Missing entries because you weren't watching at the right time",
     solve:
-      "Set TradingView alerts for B+ or A+ grade setups. Get notified the moment a high-confluence setup forms on any pair you're watching.",
+      "Get notified the moment a high-confluence B+ or A+ setup forms on any stock or pair you're watching. Never miss another entry.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function PainPoints() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            One indicator. <span className="text-primary">Every strategy.</span>
+            One platform. <span className="text-primary">Every strategy.</span>
           </h2>
 
 

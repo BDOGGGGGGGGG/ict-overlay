@@ -12,10 +12,10 @@ const features = [
   "3 strategies — ICT, SMC, Price Action",
   "10+ pattern detections",
   "F to A+ confluence grading",
-  "Zone boxes & grade labels on chart",
-  "Built-in alert conditions",
-  "Works on any pair & timeframe",
-  "All future updates included",
+  "Live setup ranking & buy zones",
+  "Real-time alerts",
+  "Any stock, pair, or timeframe",
+  "All future features included",
 ];
 
 function PlanCard({
@@ -163,7 +163,7 @@ export function PricingForm() {
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Get the indicator.
+          Get started.
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-lg mx-auto leading-relaxed">
           Pick a plan, enter your email, and get access instantly. Cancel

@@ -213,7 +213,7 @@ export function Backtest() {
               The strategy wasn't wrong. You were taking the wrong setups.
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              The indicator doesn't make you a better analyst — it makes you a more disciplined one.
+              Trading Overlay doesn't make you a better analyst — it makes you a more disciplined one.
             </p>
           </motion.div>
         </motion.div>

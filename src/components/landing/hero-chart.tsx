@@ -186,13 +186,13 @@ export function HeroChart() {
         className="mb-14 max-w-2xl"
       >
         <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 mb-6">
-          <span className="text-xs font-medium text-primary">TradingView Indicator</span>
+          <span className="text-xs font-medium text-primary">Live Trading Analysis</span>
         </div>
         <h1 className="text-5xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.08]">
-          The indicator that <span className="text-primary">grades</span> your setups.
+          Pick a strategy. Pick a stock. <span className="text-primary">We grade the setup.</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-          A TradingView indicator that detects Order Blocks, FVGs, Supply & Demand zones, and more — then grades every setup from F to A+ based on confluence. Choose ICT, SMC, or Price Action. Add it to any chart.
+          Choose ICT, SMC, or Price Action — then pick any stock or pair. Trading Overlay auto-detects Order Blocks, FVGs, Supply & Demand zones, and more, then ranks every buying opportunity from F to A+ in real time.
         </p>
         <div className="mt-8 flex items-center gap-4">
           <Button
@@ -201,11 +201,11 @@ export function HeroChart() {
             asChild
           >
             <Link href="/pricing">
-              Get the Indicator
+              Start Now
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
-          <span className="text-sm text-muted-foreground">Works on any pair & timeframe</span>
+          <span className="text-sm text-muted-foreground">Any stock, pair, or timeframe</span>
         </div>
       </motion.div>
 
@@ -245,7 +245,7 @@ export function HeroChart() {
           <div className="flex items-center justify-between border-b border-[#2a2a2c] bg-[#1a1a1c] px-4 py-2.5">
             <div className="flex items-center gap-1.5">
               <Zap className="h-3.5 w-3.5 text-[#a78bfa]" />
-              <span className="font-mono text-[11px] font-bold text-[#a78bfa] uppercase tracking-widest">Indicator</span>
+              <span className="font-mono text-[11px] font-bold text-[#a78bfa] uppercase tracking-widest">Analysis</span>
             </div>
           </div>
 
@@ -363,7 +363,7 @@ export function HeroChart() {
           <div className="border-t border-[#2a2a2c] px-4 py-3 mt-auto">
             <div className="flex items-center gap-1.5">
               <Bot className="h-3 w-3 text-[#a78bfa]" />
-              <span className="font-mono text-[10px] text-[#636366]">Pine Script v5</span>
+              <span className="font-mono text-[10px] text-[#636366]">Live analysis</span>
             </div>
           </div>
         </div>

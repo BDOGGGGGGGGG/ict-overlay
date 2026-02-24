@@ -113,13 +113,13 @@ export function Comparison() {
             Same chart. <span className="text-primary">Completely different read.</span>
           </h2>
           <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-            On the left: a plain TradingView chart. On the right: the same chart with Trading Overlay — zones detected, setups marked, confluence graded.
+            On the left: a plain chart. On the right: the same chart analyzed by Trading Overlay — zones detected, setups marked, confluence graded.
           </p>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-border">
               <div className="flex items-center border-b border-border bg-card px-5 py-3 text-sm">
-                <span className="text-muted-foreground">Without the indicator</span>
+                <span className="text-muted-foreground">Without Trading Overlay</span>
               </div>
               <div ref={plainRef} className="h-[240px] w-full bg-card opacity-60" />
             </div>

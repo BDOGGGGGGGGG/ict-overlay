@@ -106,7 +106,7 @@ export default async function DashboardPage() {
                   No active subscription
                 </p>
                 <p className="text-xs text-muted-foreground/70 mt-0.5">
-                  Subscribe to unlock the Trading Overlay indicator
+                  Subscribe to unlock live analysis and setup grading
                 </p>
               </div>
               <Button size="sm" className="glow-green shrink-0" asChild>
