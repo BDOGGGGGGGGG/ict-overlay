@@ -9,6 +9,7 @@ export type User = {
 export type Subscription = {
   id: string;
   user_id: string;
+  email: string | null;
   stripe_customer_id: string | null;
   stripe_subscription_id: string | null;
   plan: "monthly" | "yearly";

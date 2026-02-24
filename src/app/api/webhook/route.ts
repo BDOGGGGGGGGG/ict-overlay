@@ -39,6 +39,7 @@ async function upsertUserAndSubscription(
   const { error: subError } = await supabase.from("subscriptions").upsert(
     {
       user_id: user.id,
+      email: email.toLowerCase().trim(),
       stripe_customer_id: stripeCustomerId,
       stripe_subscription_id: stripeSub.id,
       plan: plan === "yearly" ? "yearly" : "monthly",

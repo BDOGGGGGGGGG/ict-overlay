@@ -20,9 +20,17 @@ export async function Navbar() {
             <Link href="/dashboard">Dashboard</Link>
           </Button>
         ) : (
-          <Button size="sm" className="rounded-full px-5 text-sm" asChild>
-            <Link href="/pricing">Get Started</Link>
-          </Button>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Sign in
+            </Link>
+            <Button size="sm" className="rounded-full px-5 text-sm" asChild>
+              <Link href="/pricing">Get Started</Link>
+            </Button>
+          </div>
         )}
       </div>
     </nav>
