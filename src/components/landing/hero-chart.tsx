@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { createChart, ColorType, CandlestickSeries, createSeriesMarkers } from "lightweight-charts";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { ArrowRight, Bot, Activity, Target, Award, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { PLACEHOLDER_CHART_DATA } from "@/lib/chart-data";
@@ -197,10 +198,12 @@ export function HeroChart() {
           <Button
             size="lg"
             className="rounded-full px-8 text-base h-12 glow-green transition-shadow duration-300"
-            onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+            asChild
           >
-            Get the Indicator
-            <ArrowRight className="h-4 w-4" />
+            <Link href="/pricing">
+              Get the Indicator
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
           <span className="text-sm text-muted-foreground">Works on any pair & timeframe</span>
         </div>

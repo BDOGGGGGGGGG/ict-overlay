@@ -12,12 +12,8 @@ export function Navbar() {
           <Logo />
           <span className="text-base font-semibold tracking-tight text-foreground">Trading Overlay</span>
         </Link>
-        <Button
-          size="sm"
-          className="rounded-full px-5 text-sm"
-          onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
-        >
-          Get the Indicator
+        <Button size="sm" className="rounded-full px-5 text-sm" asChild>
+          <Link href="/pricing">Get the Indicator</Link>
         </Button>
       </div>
     </nav>
